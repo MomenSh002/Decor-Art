@@ -148,9 +148,10 @@ header #menu {
 
 .home-btn {
     padding: 20px 0;
+    text-decoration: none;
 }
 
-.home-btn button {
+.home-btn .btn-hero {
     width: 15rem;
     padding: 12px 15px;
     border: none;
@@ -161,9 +162,11 @@ header #menu {
     letter-spacing: 1px;
     color: #fff;
     background: rgb(236, 35, 119);
+    display: inline-block;
 }
 
-button i {
+button i,
+.btn-hero i {
     margin-left: .5rem;
     font-size: 1rem;
     text-align: center;
@@ -173,16 +176,15 @@ button i {
 
 button:hover {
     background: rgb(228, 3, 96);
-
 }
 
 @keyframes animate {
     0% {
-        transform: translateX(-5px);
+        transform: translateY(-5px);
     }
 
     100% {
-        transform: translateX(5px);
+        transform: translateY(5px);
     }
 }
 
@@ -235,9 +237,6 @@ button:hover {
 
 }
 
-.about .image img:hover {
-    animation: animate-img 5s ease infinite;
-}
 
 .btn {
     margin: 10px 0;
@@ -253,33 +252,6 @@ button:hover {
 
 }
 
-@keyframes animate-img {
-
-    0%,
-    100% {
-        transform: translateX(-3rem);
-    }
-
-    25% {
-        transform: translateY(5rem);
-    }
-
-    50% {
-        transform: translateX(3rem);
-    }
-
-    75% {
-        transform: translateY(-5rem);
-    }
-}
-
-@media(max-width:768px) {
-    .about {
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
 
 /*----------------------Product---------------*/
 .title {
@@ -310,11 +282,6 @@ button:hover {
     border-radius: 1rem;
     box-shadow: 0 .3rem .6rem rgb(236, 35, 119);
     text-align: center;
-}
-
-.cake-product .inner-cake-col:hover {
-    transition: .5s ease;
-    transform: translateY(-.5rem);
 }
 
 .cake-product .inner-cake-col img {
@@ -379,8 +346,6 @@ button:hover {
     list-style: none;
     padding: 1rem 0;
     margin: 1.5rem 0;
-    border-top: .2rem dotted limegreen;
-    border-bottom: .2rem dotted limegreen;
 }
 
 .service .cake-list .btn1 {
@@ -525,7 +490,7 @@ button:hover {
 .cake-contact-col p {
     padding: .5rem 0;
     line-height: 1.5rem;
-    color: gray;
+    color: rgba(128, 128, 128, 0.451);
 }
 
 .cake-contact-col input,
